@@ -16,14 +16,13 @@
         <!-- task description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
-                <textarea id="task_description" name="task_description" minlength="5" maxlength="50" 
-                    type="text" class="materialize-textarea validate" required>
-                </textarea>
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
+                    type="text" class="materialize-textarea validate" required></textarea>
                 <label for="task_description">Task Description</label>
             </div>
         </div>
-        <!-- due_date -->
+        <!-- due date -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
@@ -44,17 +43,17 @@
                 </div>
             </div>
         </div>
-        <!-- category_id -->
+        <!-- category id -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
                 <select id="category_id" name="category_id" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
-                    <option value="{{ category.id }}">{{ category.category_name }}</option>
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
-                <label for="category_id">Task Name</label>
+                <label for="category_id">Category</label>
             </div>
         </div>
         <!-- submit button -->
